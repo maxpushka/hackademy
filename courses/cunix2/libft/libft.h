@@ -10,4 +10,6 @@ size_t ft_strlen(const char *s);
 char *ft_strcpy(char *dest, const char *src);
 char *ft_strdup(const char *s);
 
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+
 #endif
