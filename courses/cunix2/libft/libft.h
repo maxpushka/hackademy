@@ -22,4 +22,18 @@ int ft_isascii(int c);
 int ft_toupper(int c);
 int ft_tolower(int c);
 
+int ft_abs(int j);
+
+typedef struct div
+{
+    int quot;
+    int rem;
+}
+_div_t;
+
+_div_t ft_div(int numerator, int denominator);
+
+char *ft_strstr(const char *haystack, const char *needle);
+char *ft_strnstr(const char *haystack, const char *needle, size_t search_len);
+
 #endif
