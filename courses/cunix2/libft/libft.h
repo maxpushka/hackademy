@@ -36,4 +36,6 @@ _div_t ft_div(int numerator, int denominator);
 char *ft_strstr(const char *haystack, const char *needle);
 char *ft_strnstr(const char *haystack, const char *needle, size_t search_len);
 
+void *ft_memset(void *s, int c, size_t n);
+
 #endif
