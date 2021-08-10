@@ -3,7 +3,7 @@
 void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
     char *ch_dest = (char *) dest;
-    const char *ch_src = (char *) src;
+    const char *ch_src = (const char *) src;
 
     for (size_t i = 0; i < n; i++)
     {
