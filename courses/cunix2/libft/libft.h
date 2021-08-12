@@ -45,5 +45,6 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void ft_striteri(char *s, void (*f)(unsigned int, char *));
 char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char *ft_strsub(const char * s, unsigned int start, size_t len);
 
 #endif
