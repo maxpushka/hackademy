@@ -5,6 +5,7 @@
 #include <malloc.h>
 
 void ft_bzero(void *s, size_t n);
+char* ft_itoa(int value, char* buffer, int base);
 
 size_t ft_strlen(const char *s);
 char *ft_strcpy(char *dest, const char *src);
@@ -49,5 +50,7 @@ char *ft_strsub(const char * s, unsigned int start, size_t len);
 char *ft_strjoin(const char *s1, const char *s2);
 char *ft_strtrim(const char *s);
 char **ft_strsplit(const char *s, char c);
+
+int ft_printf(char *format, ...);
 
 #endif
