@@ -1,4 +1,4 @@
-#include "../../libft/libft.h"
+#include "../libft.h"
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdarg.h>
