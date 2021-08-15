@@ -2,8 +2,8 @@
 
 char *ft_strtrim(const char *s)
 {
-    const char* s_start = s;
-    const char* s_end = s + ft_strlen(s) - 1;
+    const char *s_start = s;
+    const char *s_end = s + ft_strlen(s) - 1;
 
     while (*s_start == ' ' || *s_start == '\n' || *s_start == '\t')
     {
