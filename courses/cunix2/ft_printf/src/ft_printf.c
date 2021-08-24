@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "../../libft/libft.h"
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -38,6 +38,7 @@ int ft_printf(char *format, ...)
             number_of_chars++;
             continue;
         }
+
         i = is_formated ? i : i + 1;
 
         switch (format[i])
@@ -47,8 +48,7 @@ int ft_printf(char *format, ...)
                 int_value = va_arg(arg_list, int);
                 size_of_string = ft_to_string(int_value, buffer);
 
-                char *sign;
-                sign = int_value < 0 ? "-" : (is_sign == 1 ? "+" : (is_sign == 2 ? " " : ""));
+                char *sign = int_value < 0 ? "-" : (is_sign == 1 ? "+" : (is_sign == 2 ? " " : ""));
                 size_of_string = sign[0] == 0 ? size_of_string : size_of_string + 1;
 
                 string_value = buffer;
