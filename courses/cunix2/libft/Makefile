@@ -1,20 +1,17 @@
+CC					:= gcc
+RM					:= rm -rf
+CFLAGS		    	+= -std=c99 -Iinclude -Wall -Wextra -Werror -c
+SRCS				:= $(wildcard src/*.c)
+OBJS				:= $(SRCS:.c=.o)
+LIB_NAME			:= libft.a
+STYLE50				:= ~/.local/bin/style50
 
-CC := gcc
-RM := rm -rf
-CFLAGS += -Iinclude -Wall -Wextra -Werror -g -std=c99
+all:		    clean $(OBJS)
+				@$(CC) $(CFLAGS) $(SRCS)
+				@ar rcs $(LIB_NAME) src/*.o
 
-SRCS := $(wildcard src/ft_*.c)
-OBJS := $(SRCS:.c=.o)
-NAME := libft.a
-
-all: $(NAME) clean
-
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+checkstyle:
+				@$(STYLE50) $(SRCS) #&>/dev/null && echo "LOOKS GOOD!!!"
 
 clean:
-	$(RM) $(OBJS)
-
-fclean: clean
-	$(RM) $(NAME)
-
+				$(RM) $(OBJS) $(LIB_NAME)

@@ -1,8 +1,8 @@
 #include "../libft.h"
 
-void *ft_memchr(const void *s, unsigned char c, size_t n)
+void *ft_memchr(const void *s, char c, size_t n)
 {
-    const unsigned char *ss = (const unsigned char *) s;
+    const char *ss = (const char *) s;
 
     for (size_t i = 0; i < n; i++)
     {
