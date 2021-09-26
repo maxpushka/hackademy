@@ -1,0 +1,17 @@
+version: "3"
+services:
+  amqp:
+    image: rabbitmq:3.8-management
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  prometheus:
+    network_mode: host
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+volumes:
+  rabbitmq_data:
